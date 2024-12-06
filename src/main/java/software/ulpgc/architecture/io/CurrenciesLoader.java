@@ -2,6 +2,8 @@ package software.ulpgc.architecture.io;
 
 import software.ulpgc.architecture.model.Currency;
 
-public interface CurrencyDeserializer {
-    Currency deserializer(String line);
+import java.util.List;
+
+public interface CurrenciesLoader {
+    List<Currency> load();
 }
