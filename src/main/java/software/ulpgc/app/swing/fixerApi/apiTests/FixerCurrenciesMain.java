@@ -1,4 +1,4 @@
-package software.ulpgc.app.swing.fixerApi.mains;
+package software.ulpgc.app.swing.fixerApi.apiTests;
 
 import software.ulpgc.app.swing.fixerApi.FixerApiCurrenciesLoader;
 import software.ulpgc.architecture.model.Currency;

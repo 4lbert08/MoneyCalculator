@@ -20,7 +20,7 @@ import java.util.Map;
 import static java.util.Collections.emptyList;
 
 public class FixerApiCurrenciesLoader implements CurrenciesLoader {
-    private final static String apiUrl = "http://data.fixer.io/api/symbols?access_key=" + FixerApi.apiKey;
+    private final static String BASE_URL = "http://data.fixer.io/api/symbols?access_key=" + FixerApi.apiKey;
 
     @Override
     public List<Currency> load() {
@@ -43,7 +43,7 @@ public class FixerApiCurrenciesLoader implements CurrenciesLoader {
     }
 
     private String loadBody() throws IOException {
-        URL url = new URL(apiUrl);
+        URL url = new URL(BASE_URL);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         int statusCode = connection.getResponseCode();
