@@ -1,4 +1,4 @@
-package software.ulpgc.app.swing.fixerApi;
+package software.ulpgc.app.fixerApi;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

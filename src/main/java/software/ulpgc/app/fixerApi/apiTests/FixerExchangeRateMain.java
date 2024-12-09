@@ -1,6 +1,6 @@
-package software.ulpgc.app.swing.fixerApi.apiTests;
+package software.ulpgc.app.fixerApi.apiTests;
 
-import software.ulpgc.app.swing.fixerApi.FixerApiExchangeRateLoader;
+import software.ulpgc.app.fixerApi.FixerApiExchangeRateLoader;
 import software.ulpgc.architecture.model.Currency;
 import software.ulpgc.architecture.model.ExchangeRate;
 
