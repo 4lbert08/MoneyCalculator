@@ -14,7 +14,7 @@ public class SwingMain {
         List<Currency> currencies = new FixerApiCurrenciesLoader().load();
         Command command = new ExchangeMoneyCommand(
                 mainFrame.getCurrencyDialog().define(currencies, "To which currency do you want to change it:"),
-                mainFrame.getMoneyDialog().define(currencies, "Money to exchange:"),
+                mainFrame.getMoneyDialog().define(currencies, "Quantity to exchange:"),
                 mainFrame.getMoneyDisplay(),
                 new FixerApiExchangeRateLoader());
                 mainFrame.put("exchange money", command);

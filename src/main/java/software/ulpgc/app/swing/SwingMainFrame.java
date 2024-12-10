@@ -18,7 +18,7 @@ public class SwingMainFrame extends JFrame {
     public SwingMainFrame() {
         commands = new HashMap<>();
         setTitle("Money Calculator App");
-        setSize(750, 200);
+        setSize(750, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         this.setLayout(new GridLayout(4,1,5,5));
@@ -31,9 +31,7 @@ public class SwingMainFrame extends JFrame {
     private Component exchangeButton() {
         JPanel panel = new JPanel();
         JButton button = new JButton("Exchange");
-        button.addActionListener(_ -> {
-            commands.get("exchange money").execute();
-        });
+        button.addActionListener(_ -> commands.get("exchange money").execute());
         panel.add(button);
         return panel;
     }
