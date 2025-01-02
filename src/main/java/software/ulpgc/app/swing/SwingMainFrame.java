@@ -5,6 +5,7 @@ import software.ulpgc.architecture.view.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,11 +22,18 @@ public class SwingMainFrame extends JFrame {
         setSize(750, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        this.setLayout(new GridLayout(4,1,5,5));
-        this.add(createMoneyDialog());
-        this.add(createCurrencyDialog());
-        this.add(exchangeButton());
-        this.add(createMoneyDisplay());
+        setLayout(new BorderLayout());
+        addMiddlePanel();
+    }
+
+    private void addMiddlePanel() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(4,1,5,5));
+        panel.add(createMoneyDialog());
+        panel.add(createCurrencyDialog());
+        panel.add(exchangeButton());
+        panel.add(createMoneyDisplay());
+        this.add(panel, BorderLayout.CENTER);
     }
 
     private Component exchangeButton() {
